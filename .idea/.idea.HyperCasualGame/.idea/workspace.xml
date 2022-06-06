@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a1370263-6739-4d9d-895c-d84692191d7a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/DOTween.XML" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/DOTween.XML.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/DOTween.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/DOTween.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Editor.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Editor/DOTweenEditor.XML" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Editor/DOTweenEditor.XML.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Editor/DOTweenEditor.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Editor/DOTweenEditor.dll.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Editor/Imgs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Editor/Imgs/DOTweenIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Editor/Imgs/DOTweenIcon.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Editor/Imgs/DOTweenMiniIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Editor/Imgs/DOTweenMiniIcon.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Editor/Imgs/Footer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Editor/Imgs/Footer.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Editor/Imgs/Footer_dark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Editor/Imgs/Footer_dark.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Editor/Imgs/Header.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Editor/Imgs/Header.jpg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Modules.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Modules/DOTweenModuleEPOOutline.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Modules/DOTweenModuleEPOOutline.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Modules/DOTweenModulePhysics.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Modules/DOTweenModulePhysics.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Modules/DOTweenModulePhysics2D.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Modules/DOTweenModuleSprite.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Modules/DOTweenModuleSprite.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Modules/DOTweenModuleUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Modules/DOTweenModuleUI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Modules/DOTweenModuleUnityVersion.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Modules/DOTweenModuleUnityVersion.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Modules/DOTweenModuleUtils.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/Modules/DOTweenModuleUtils.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/readme.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AssetStore/Demigiant/DOTween/readme.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset.meta" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2ACsEQp5BMtwTlXP979xccwSKtx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a1370263-6739-4d9d-895c-d84692191d7a" name="Changes" comment="" />
+      <created>1654524794469</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1654524794469</updated>
+      <workItem from="1654524804574" duration="8000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
