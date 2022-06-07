@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberOfEnemy: 0
-  textOnEnemy: {fileID: 0}
+  textOnEnemy: {fileID: 812527872}
 --- !u!135 &107659967
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -529,6 +529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreManager: {fileID: 1649154728}
+  trailFinger: {fileID: 832951196}
 --- !u!4 &668036908
 Transform:
   m_ObjectHideFlags: 0
@@ -713,6 +714,11 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &832951196 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8735998513132523657, guid: 93a42abcdb6345b46813b6f3201f373b, type: 3}
+  m_PrefabInstance: {fileID: 1813272452}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &887838297
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,7 +752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberOfEnemy: 0
-  textOnEnemy: {fileID: 0}
+  textOnEnemy: {fileID: 630089712}
 --- !u!135 &887838299
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -934,7 +940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberOfEnemy: 0
-  textOnEnemy: {fileID: 1874963990}
+  textOnEnemy: {fileID: 1657126529}
 --- !u!1 &1033276765
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,7 +974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberOfEnemy: 0
-  textOnEnemy: {fileID: 0}
+  textOnEnemy: {fileID: 1874963990}
 --- !u!135 &1033276767
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1272,6 +1278,63 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &1813272452
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6257679830047229633, guid: 93a42abcdb6345b46813b6f3201f373b, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257679830047229633, guid: 93a42abcdb6345b46813b6f3201f373b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257679830047229633, guid: 93a42abcdb6345b46813b6f3201f373b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257679830047229633, guid: 93a42abcdb6345b46813b6f3201f373b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257679830047229633, guid: 93a42abcdb6345b46813b6f3201f373b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257679830047229633, guid: 93a42abcdb6345b46813b6f3201f373b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257679830047229633, guid: 93a42abcdb6345b46813b6f3201f373b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257679830047229633, guid: 93a42abcdb6345b46813b6f3201f373b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257679830047229633, guid: 93a42abcdb6345b46813b6f3201f373b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257679830047229633, guid: 93a42abcdb6345b46813b6f3201f373b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6257679830047229633, guid: 93a42abcdb6345b46813b6f3201f373b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8735998513132523657, guid: 93a42abcdb6345b46813b6f3201f373b, type: 3}
+      propertyPath: m_Name
+      value: Trail_finger
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 93a42abcdb6345b46813b6f3201f373b, type: 3}
 --- !u!1 &1840433450
 GameObject:
   m_ObjectHideFlags: 0
