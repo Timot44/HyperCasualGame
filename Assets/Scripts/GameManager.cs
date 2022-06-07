@@ -1,19 +1,26 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-	public ScoreManager scoreManager;
+	[Header("TRAIL SETTINGS")]
 	public GameObject trailFinger;
-	
 	public float distanceFromCamera = 5;
-	private Camera _cam;
+	
+	[Header("SCORE")]
+	public ScoreManager scoreManager;
+	public int score;
+	public int bonus;
+	public TextMeshPro textScore;
+	
+	private Camera cam;
 
 	private void Start()
 	{
-		_cam = Camera.main;
+		cam = Camera.main;
 	}
 
 	// Update is called once per frame
@@ -32,7 +39,7 @@ public class GameManager : MonoBehaviour
 		
 		if (Input.GetMouseButton(0) && scoreManager.enemiesInGoodOrder.Count >0)
 		{
-			Ray ray = _cam.ScreenPointToRay(Input.mousePosition);
+			Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
 			if (Physics.Raycast(ray, out var hit))
 			{
@@ -43,6 +50,13 @@ public class GameManager : MonoBehaviour
 					scoreManager.enemiesInGoodOrder.Remove(scoreEnemy);
 					
 					hit.collider.gameObject.SetActive(false);
+
+					score++;
+					textScore.text = $"Score : {score}";
+				}
+				else
+				{
+					Debug.LogWarning("Wrong Enemy");
 				}
 			}
 		}
@@ -50,6 +64,6 @@ public class GameManager : MonoBehaviour
 	
 	void MoveTrailToCursor(Vector3 screenPosition)
 	{
-		trailFinger.transform.position = _cam.ScreenToWorldPoint(new Vector3(screenPosition.x, screenPosition.y, distanceFromCamera));
+		trailFinger.transform.position = cam.ScreenToWorldPoint(new Vector3(screenPosition.x, screenPosition.y, distanceFromCamera));
 	}
 }
