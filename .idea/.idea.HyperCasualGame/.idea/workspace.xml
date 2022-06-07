@@ -7,17 +7,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
     <list default="true" id="a1370263-6739-4d9d-895c-d84692191d7a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperCasualGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperCasualGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
-    </list>
-=======
-    <list default="true" id="a1370263-6739-4d9d-895c-d84692191d7a" name="Changes" comment="" />
->>>>>>> player
-=======
-    <list default="true" id="a1370263-6739-4d9d-895c-d84692191d7a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperCasualGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperCasualGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayerManager.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayerManager.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Score/ScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Score/ScoreManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
     </list>
 >>>>>>> player
     <option name="SHOW_DIALOG" value="false" />
@@ -47,8 +37,8 @@
       <option value="$PROJECT_DIR$/../SquibblesMania/SquibblesMania/Assets/Scripts/PowerManager/PowerManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Score/ScoreEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Score/ScoreManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ACsEQp5BMtwTlXP979xccwSKtx" />
@@ -98,16 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1654524794469</updated>
       <workItem from="1654524804574" duration="8000" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <workItem from="1654594214033" duration="638000" />
-      <workItem from="1654604243453" duration="2250000" />
-=======
-      <workItem from="1654594214033" duration="7924000" />
->>>>>>> player
-=======
-      <workItem from="1654594214033" duration="10790000" />
->>>>>>> player
+      <workItem from="1654594214033" duration="11857000" />
     </task>
     <servers />
   </component>
