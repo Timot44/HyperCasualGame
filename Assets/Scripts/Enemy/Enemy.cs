@@ -11,7 +11,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Transform target;
     [SerializeField] private float moveSpeed = 3f;
     [SerializeField] private float rangeMovement = 1f;
-
+    
+    private PlayerHealth _playerHealth;
+    private string _playerTag = "Player";
     protected virtual void Awake()
     {
         enemyHealth = new EnemyHealth();
@@ -20,6 +22,7 @@ public class Enemy : MonoBehaviour
     protected virtual void Start()
    {
        target = GameObject.FindWithTag("Player").transform;
+      _playerHealth = target.gameObject.GetComponent<PlayerHealth>();
        enemyHealth.EnemyDeathEvent += OnEnemyDeathEvent;
    }
 
@@ -37,6 +40,7 @@ public class Enemy : MonoBehaviour
        {
            transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
        }
+       
    }
 
    protected virtual void RotateTowardPlayer()
@@ -51,5 +55,12 @@ public class Enemy : MonoBehaviour
        Destroy(gameObject);
    }
 
-  
+   private void OnTriggerEnter(Collider other)
+   {
+       if (other.gameObject.CompareTag(_playerTag))
+       {
+           _playerHealth.TakeDamage(1);
+           enemyHealth.TakeDamage(enemyHealth.maxHealth);
+       }
+   }
 }

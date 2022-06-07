@@ -6,8 +6,8 @@ using UnityEngine;
 [Serializable]
 public class EnemyHealth: IDamageable
 {
-    [SerializeField]
-    private int maxHealth = 1;
+   
+    public int maxHealth = 1;
     private int _health;
     public event Action EnemyDeathEvent;
 
