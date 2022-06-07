@@ -6,7 +6,9 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 	public ScoreManager scoreManager;
-
+	public GameObject trailFinger;
+	
+	public float distanceFromCamera = 5;
 	private Camera _cam;
 
 	private void Start()
@@ -17,6 +19,17 @@ public class GameManager : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		if(Input.GetMouseButton(0))
+		{
+			trailFinger.SetActive(true);
+			MoveTrailToCursor(Input.mousePosition);
+		}
+		else
+		{
+			trailFinger.SetActive(false);
+			MoveTrailToCursor(Input.mousePosition);
+		}
+		
 		if (Input.GetMouseButton(0) && scoreManager.enemiesInGoodOrder.Count >0)
 		{
 			Ray ray = _cam.ScreenPointToRay(Input.mousePosition);
@@ -33,5 +46,10 @@ public class GameManager : MonoBehaviour
 				}
 			}
 		}
+	}
+	
+	void MoveTrailToCursor(Vector3 screenPosition)
+	{
+		trailFinger.transform.position = _cam.ScreenToWorldPoint(new Vector3(screenPosition.x, screenPosition.y, distanceFromCamera));
 	}
 }
