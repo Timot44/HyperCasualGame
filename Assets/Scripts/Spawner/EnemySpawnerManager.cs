@@ -7,27 +7,33 @@ public class EnemySpawnerManager : MonoBehaviour
 {
 
     public List<Wave> waves = new List<Wave>();
-
+    [SerializeField]
+    private int waveCount = 0;
     [SerializeField] private float maxTimeBetweenWaves = 2f;
     [SerializeField] private float waveCountdown;
-    void Start()
+  private void Start()
     {
         waveCountdown = maxTimeBetweenWaves;
     }
     
-    void Update()
+   private void Update()
     {
-        
+        GenerateWave();
     }
-    
-        
+
+    private void GenerateWave()
+    {
+        throw new NotImplementedException();
+    }
+
+
     [Serializable]
     public class Wave
     {
         public string waveName;
         public int numberOfEnemyWave;
         public float waveRate;
-
+        public GameObject[] enemies;
         public Wave(string waveName, int numberOfEnemyWave, float waveRate)
         {
             this.waveName = waveName;

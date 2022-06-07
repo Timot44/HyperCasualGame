@@ -621,5 +621,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3655820516816863225, guid: 2497f25eb91de854bb9a540b55cf8f64, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2497f25eb91de854bb9a540b55cf8f64, type: 3}
