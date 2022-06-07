@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if (Input.GetMouseButton(0))
+		if (Input.GetMouseButton(0) && scoreManager.enemiesInGoodOrder.Count >0)
 		{
 			Ray ray = _cam.ScreenPointToRay(Input.mousePosition);
 
