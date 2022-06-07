@@ -1,12 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class ScoreManager : MonoBehaviour
 {
     public List<ScriptableObjectScore> scoreObjects;
-
     public List<ScoreEnemy> enemies;
+    public List<ScoreEnemy> enemiesInGoodOrder;
+
     public int maxEnemyNumber;
     
     #region Singleton
@@ -22,7 +26,7 @@ public class ScoreManager : MonoBehaviour
     }
 
     #endregion
-    
+
     // Update is called once per frame
     void Update()
     {
@@ -46,8 +50,11 @@ public class ScoreManager : MonoBehaviour
                 var rTMP = Random.Range(0, newList[rSo].possibilityOfStrings.Count);
                 enemies[i].textOnEnemy.text = newList[rSo].possibilityOfStrings[rTMP];
 
+                enemiesInGoodOrder.Add(enemies[i]);
+                
                 newList.RemoveAt(rSo);
             }
+            enemiesInGoodOrder = enemiesInGoodOrder.OrderBy(ch => ch.numberOfEnemy).ToList();
         }
     }
 }
