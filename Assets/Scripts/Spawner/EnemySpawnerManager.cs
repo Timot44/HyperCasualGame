@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class EnemySpawnerManager : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class EnemySpawnerManager : MonoBehaviour
     private int waveCount = 0;
     [SerializeField] private float maxTimeBetweenWaves = 2f;
     [SerializeField] private float waveCountdown;
+    [SerializeField]
+    private bool isStartNextWave = true;
+
+    [SerializeField] private Transform[] enemySpawnPoints;
   private void Start()
     {
         waveCountdown = maxTimeBetweenWaves;
@@ -23,7 +28,35 @@ public class EnemySpawnerManager : MonoBehaviour
 
     private void GenerateWave()
     {
-        throw new NotImplementedException();
+        if (isStartNextWave)
+        {
+            waveCountdown -= Time.deltaTime;
+        }
+
+        if (waveCountdown <= 0 && isStartNextWave)
+        {
+            StartCoroutine(SpawnWave(waves[waveCount]));
+            isStartNextWave = false;
+            waveCountdown = maxTimeBetweenWaves;
+        }
+    }
+
+    IEnumerator SpawnWave(Wave wave)
+    {
+        var waitForSecondsEnemySpawnRate = new WaitForSeconds(wave.enemySpawnRate);
+        for (var i = 0; i < wave.numberOfEnemyWave; i++)
+        {
+            SpawnEnemy(wave);
+            yield return waitForSecondsEnemySpawnRate;
+        }
+        
+    }
+
+    private void SpawnEnemy(Wave wave)
+    {
+        //Pick a random spawn point 
+        var randomSpawnTransform = enemySpawnPoints[Random.Range(0, enemySpawnPoints.Length)];
+        Instantiate(wave.enemies[Random.Range(0, wave.enemies.Length)], randomSpawnTransform.position, Quaternion.identity);
     }
 
 
@@ -32,13 +65,13 @@ public class EnemySpawnerManager : MonoBehaviour
     {
         public string waveName;
         public int numberOfEnemyWave;
-        public float waveRate;
-        public GameObject[] enemies;
-        public Wave(string waveName, int numberOfEnemyWave, float waveRate)
+        public float enemySpawnRate;
+        public Enemy[] enemies;
+        public Wave(string waveName, int numberOfEnemyWave, float enemySpawnRate)
         {
             this.waveName = waveName;
             this.numberOfEnemyWave = numberOfEnemyWave;
-            this.waveRate = waveRate;
+            this.enemySpawnRate = enemySpawnRate;
         }
         
     }
