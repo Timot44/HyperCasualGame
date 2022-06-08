@@ -53,6 +53,7 @@ public class Enemy : MonoBehaviour
    {
        //TODO VFX explosion enemy
        Destroy(gameObject);
+       if (EnemySpawnerManager.Instance != null) EnemySpawnerManager.Instance.CheckAllEnemiesWave(this);
    }
 
    private void OnTriggerEnter(Collider other)

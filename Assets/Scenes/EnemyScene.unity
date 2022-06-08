@@ -562,7 +562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - waveName: Wave 1
+  - waveName: Wave 0
     numberOfEnemyWave: 3
     enemySpawnRate: 1
     enemies:
@@ -570,13 +570,16 @@ MonoBehaviour:
   waveCount: 0
   maxTimeBetweenWaves: 2
   waveCountdown: 0
-  isStartNextWave: 1
+  currentEnemiesInWave: []
+  waveState: 0
   enemySpawnPoints:
   - {fileID: 254372053}
   - {fileID: 98809664}
   - {fileID: 347716499}
   - {fileID: 1642942372}
   - {fileID: 1381500096}
+  numberOfEnemiesToAddNextWave: 2
+  reducingWaveTimeRate: 0.1
 --- !u!1 &1381500095
 GameObject:
   m_ObjectHideFlags: 0
