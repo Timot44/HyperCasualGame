@@ -23,8 +23,13 @@ public class EnemySpawnerManager : MonoBehaviour
     
     [SerializeField] private Transform[] enemySpawnPoints;
     public bool isAllEnemiesSpawned;
+
+    [Header("NEXT WAVE PARAMETERS")] [SerializeField]
+    private int maxEnemiesInWave = 6;
+    [SerializeField] private float minEnemySpawnRateTimer = 0.5f;
     [SerializeField] private int numberOfEnemiesToAddNextWave = 2;
     [SerializeField] private float reducingWaveTimeRate = 0.1f;
+    
     private static EnemySpawnerManager _enemySpawnerManager;
     public static EnemySpawnerManager Instance => _enemySpawnerManager;
     private void Awake()
@@ -45,14 +50,10 @@ public class EnemySpawnerManager : MonoBehaviour
     private void GenerateWave()
     {
         if (waveState == WaveState.Waiting)
-        {
             return;
-        }
 
-        if (waveState == WaveState.Spawning)
-        {
+        if (waveState == WaveState.Spawning) 
             waveCountdown -= Time.deltaTime;
-        }
 
         if (waveCountdown <= 0 && waveState == WaveState.Spawning)
         {
@@ -89,6 +90,7 @@ public class EnemySpawnerManager : MonoBehaviour
         currentEnemiesInWave.Remove(enemy);
         if (currentEnemiesInWave.Count <= 0)
         {
+            isAllEnemiesSpawned = false;
             StartNewWave();
         }
         
@@ -97,8 +99,15 @@ public class EnemySpawnerManager : MonoBehaviour
     private void StartNewWave()
     {
         var lastWave = waves[waveCount];
-        var newWave = new Wave($"Wave {waveCount + 1}", lastWave.numberOfEnemyWave + numberOfEnemiesToAddNextWave,
-            lastWave.enemySpawnRate - reducingWaveTimeRate, lastWave.enemies);
+        
+        var newNumberOfEnemyWave = lastWave.numberOfEnemyWave + numberOfEnemiesToAddNextWave;
+        var newEnemySpawnRate = lastWave.enemySpawnRate - reducingWaveTimeRate;
+        
+        var numberOfEnemyWave = newNumberOfEnemyWave <= maxEnemiesInWave ? newNumberOfEnemyWave : lastWave.numberOfEnemyWave;
+        var enemySpawnRate = newEnemySpawnRate >= minEnemySpawnRateTimer ? newEnemySpawnRate : lastWave.enemySpawnRate;
+        
+        var newWave = new Wave($"Wave {waveCount + 1}", numberOfEnemyWave, enemySpawnRate, lastWave.enemies);
+        
         waves.Add(newWave);
         waveCount++;
         waveState = WaveState.Spawning;

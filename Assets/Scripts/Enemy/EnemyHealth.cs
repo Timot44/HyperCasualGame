@@ -23,7 +23,6 @@ public class EnemyHealth: IDamageable
         if (_health <= 0)
         {
             EnemyDie();
-            
         }
     }
 
