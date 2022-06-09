@@ -53,7 +53,7 @@ public class Enemy : MonoBehaviour
    protected virtual void OnEnemyDeathEvent()
    {
        //TODO VFX explosion enemy
-       ParticleSystem deathParticle =  Instantiate(enemyDeathParticle, transform.position, Quaternion.identity);
+       var deathParticle =  Instantiate(enemyDeathParticle, transform.position, Quaternion.identity);
        Destroy(deathParticle, 2f);
        Destroy(gameObject);
        if (EnemySpawnerManager.Instance != null) EnemySpawnerManager.Instance.CheckAllEnemiesWave(this);
