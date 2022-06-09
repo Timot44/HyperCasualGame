@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -14,7 +15,6 @@ public class Enemy : MonoBehaviour
     [SerializeField] private Vector3 targetOffset = Vector3.up;
     private PlayerHealth _playerHealth;
     private string _playerTag = "Player";
-    [SerializeField] private ParticleSystem enemyDeathParticle;
     protected virtual void Awake()
     {
         enemyHealth = new EnemyHealth();
@@ -53,12 +53,13 @@ public class Enemy : MonoBehaviour
    protected virtual void OnEnemyDeathEvent()
    {
        //TODO VFX explosion enemy
-       var deathParticle =  Instantiate(enemyDeathParticle, transform.position, Quaternion.identity);
-       Destroy(deathParticle, 2f);
+       var deathParticle = PoolManager.Instance.SpawnObjectFromPool("EnemyDeathParticle", transform.position, Quaternion.identity, null);
+       PoolManager.Instance.ReturnObjectToFalse(deathParticle, "EnemyDeathParticle");
        Destroy(gameObject);
        if (EnemySpawnerManager.Instance != null) EnemySpawnerManager.Instance.CheckAllEnemiesWave(this);
    }
 
+  
    private void OnTriggerEnter(Collider other)
    {
        if (other.gameObject.CompareTag(_playerTag))
