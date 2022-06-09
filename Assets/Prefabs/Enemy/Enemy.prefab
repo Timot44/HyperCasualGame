@@ -131,7 +131,7 @@ MonoBehaviour:
   enemyHealth:
     maxHealth: 1
   target: {fileID: 0}
-  moveSpeed: 3
+  moveSpeed: 1.5
   rangeMovement: 1
 --- !u!114 &1493168877818338089
 MonoBehaviour:
