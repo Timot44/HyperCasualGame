@@ -76,16 +76,16 @@ public class PoolManager : MonoBehaviour
         return objectToSpawn;
     }
 
-    public void ReturnObjectToFalse(GameObject gameObject, string tag)
+    public void ReturnObjectToFalse(GameObject prefabGameObject, string prefabTag)
     {
-        StartCoroutine(SetFalsePrefabObjectCoroutine(gameObject, tag));
+        StartCoroutine(SetFalsePrefabObjectCoroutine(prefabGameObject, prefabTag));
     }
     
-    private IEnumerator SetFalsePrefabObjectCoroutine(GameObject prefab, string tag)
+    private IEnumerator SetFalsePrefabObjectCoroutine(GameObject prefab, string prefabTag)
     {
         foreach (var pool in pools)
         {
-            if (pool.poolTag == tag)
+            if (pool.poolTag == prefabTag)
             {
                 var waitForSeconds = new WaitForSeconds(pool.delayToSetFalsePrefab);
                 yield return waitForSeconds;

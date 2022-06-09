@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,10 +19,23 @@ public class GameManager : MonoBehaviour
 	public TextMeshPro textScore;
 	
 	private Camera cam;
+	private static GameManager _gameManager;
+	public static GameManager Instance => _gameManager;
+	[Header("GAME ENDING PARAMETERS")] [SerializeField]
+	private GameObject panelGameOver;
+	[SerializeField] private Volume postProcess;
+	private DepthOfField _depthOfField;
+	public bool isGameOver;
+	private void Awake()
+	{
+		_gameManager = this;
+		postProcess.profile.Reset();
+	}
 
 	private void Start()
 	{
 		cam = Camera.main;
+		if (postProcess.profile.TryGet(out DepthOfField depthOfField)) _depthOfField = depthOfField;
 	}
 
 	// Update is called once per frame
@@ -65,5 +80,12 @@ public class GameManager : MonoBehaviour
 	void MoveTrailToCursor(Vector3 screenPosition)
 	{
 		trailFinger.transform.position = cam.ScreenToWorldPoint(new Vector3(screenPosition.x, screenPosition.y, distanceFromCamera));
+	}
+
+	public void SetUpGameOver()
+	{
+		_depthOfField.active = true;
+		panelGameOver.SetActive(true);
+		isGameOver = true;
 	}
 }

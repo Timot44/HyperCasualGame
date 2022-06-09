@@ -36,5 +36,9 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 	void Die()
 	{
 		playerPulsingParticle.gameObject.SetActive(false);
+		if (GameManager.Instance != null)
+		{
+			GameManager.Instance.SetUpGameOver();
+		}
 	}
 }

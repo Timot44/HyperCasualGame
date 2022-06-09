@@ -13,13 +13,14 @@ public class EnemySpawnerManager : MonoBehaviour
     [SerializeField] private float maxTimeBetweenWaves = 2f;
     [SerializeField] private float waveCountdown;
     public List<Enemy> currentEnemiesInWave = new List<Enemy>();
-    private enum WaveState
+
+    public enum WaveState
     {
         Spawning,
         Waiting
     };
-    [SerializeField]
-    private WaveState waveState;
+    
+    public WaveState waveState;
     
     [SerializeField] private Transform[] enemySpawnPoints;
     public bool isAllEnemiesSpawned;
@@ -91,7 +92,11 @@ public class EnemySpawnerManager : MonoBehaviour
         if (currentEnemiesInWave.Count <= 0)
         {
             isAllEnemiesSpawned = false;
-            StartNewWave();
+            if (!GameManager.Instance.isGameOver)
+            {
+                StartNewWave();
+            }
+            
         }
         
     }
