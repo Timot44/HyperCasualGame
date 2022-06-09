@@ -11,7 +11,8 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 	public Transform parentInstantiate;
 	public GameObject currentMeshPlayer;
 	public List<GameObject> gameObjectToReplace;
-	
+
+	[SerializeField] private ParticleSystem playerPulsingParticle;
 	public void Start()
 	{
 		currentHealth = maxHealth;
@@ -34,6 +35,6 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
 	void Die()
 	{
-		
+		playerPulsingParticle.gameObject.SetActive(false);
 	}
 }
