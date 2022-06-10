@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 1493168877818338089}
   - component: {fileID: 9217086377463159372}
   - component: {fileID: 4352231481899419358}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,10 +131,9 @@ MonoBehaviour:
   enemyHealth:
     maxHealth: 1
   target: {fileID: 0}
-  moveSpeed: 3
+  moveSpeed: 1.5
   rangeMovement: 1
   targetOffset: {x: 0, y: 0.5, z: 0}
-  enemyDeathParticle: {fileID: 3010158798128440334, guid: 24f842a3bdebc234aa4539c9f4da72ba, type: 3}
 --- !u!114 &1493168877818338089
 MonoBehaviour:
   m_ObjectHideFlags: 0
