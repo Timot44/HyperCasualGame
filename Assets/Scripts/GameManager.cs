@@ -127,6 +127,10 @@ public class GameManager : MonoBehaviour
 	public void SetUpGameOver()
 	{
 		_depthOfField.active = true;
+		if (EnemySpawnerManager.Instance != null)
+		{
+			foreach (var enemy in EnemySpawnerManager.Instance.currentEnemiesInWave) enemy.gameObject.SetActive(false);
+		}
 		panelGameOver.SetActive(true);
 		isGameOver = true;
 	}
