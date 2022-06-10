@@ -40,7 +40,6 @@ public class ScoreManager : MonoBehaviour
 			if (e.TryGetComponent(out ScoreEnemy scoreEnemy))
 			{
 				enemies.Add(scoreEnemy);
-				Debug.Log("HEHE HHEHEEH");
 			}
 		}
 		
@@ -48,7 +47,6 @@ public class ScoreManager : MonoBehaviour
 
 		for (int i = maxEnemyNumber - enemies.Count - 1; i >= 0; i--)
 		{
-			Debug.Log("WHOLE LOTTA LOVE");
 			var maxValue = Mathf.Max(newList.Count);
 			newList.RemoveAt(maxValue - 1);
 		}

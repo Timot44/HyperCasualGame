@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
 	public ScoreManager scoreManager;
 	public float score;
 	public float multiplierToAdd = 0.1f;
+	public float multiplier = 1f;
 
 	public TextMeshPro textScore;
 	
@@ -60,9 +61,10 @@ public class GameManager : MonoBehaviour
 
 			if (Physics.Raycast(ray, out var hit, Mathf.Infinity, layerEnemy))
 			{
-				if (hit.collider.name == scoreManager.enemiesInGoodOrder[0].name)
+				hit.collider.TryGetComponent(out ScoreEnemy scoreEnemy);
+				
+				if (scoreEnemy.numberOfEnemy == scoreManager.enemiesInGoodOrder[0].numberOfEnemy)
 				{
-					hit.collider.TryGetComponent(out ScoreEnemy scoreEnemy);
 					hit.collider.TryGetComponent(out Enemy enemy);
 					
 					scoreManager.enemiesInGoodOrder.Remove(scoreEnemy);
@@ -75,10 +77,9 @@ public class GameManager : MonoBehaviour
 					multiplierToAdd += 0.01f;
 					score++;
 					
-					var addMultiplier = score + multiplierToAdd;
-					Debug.Log(addMultiplier);
+					var addMultiplier = multiplier * multiplierToAdd;
 					
-					score += addMultiplier;
+					score *= addMultiplier;
 
 					var scoreCap = Mathf.Ceil(score);
 					
@@ -87,6 +88,7 @@ public class GameManager : MonoBehaviour
 				else
 				{
 					multiplierToAdd = 0.1f;
+					multiplier = 1f;
 				}
 			}
 		}
