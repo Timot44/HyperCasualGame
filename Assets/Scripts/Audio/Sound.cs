@@ -18,7 +18,4 @@ public class Sound : MonoBehaviour
     public AudioSource source;
 
     public bool loop;
-
-    public bool canPlay;
-    public bool isEffect;
 }
