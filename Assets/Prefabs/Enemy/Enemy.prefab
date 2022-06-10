@@ -131,7 +131,7 @@ MonoBehaviour:
   enemyHealth:
     maxHealth: 1
   target: {fileID: 0}
-  moveSpeed: 3
+  moveSpeed: 1.5
   rangeMovement: 1
   targetOffset: {x: 0, y: 0.5, z: 0}
   enemyDeathParticle: {fileID: 3010158798128440334, guid: 24f842a3bdebc234aa4539c9f4da72ba, type: 3}
