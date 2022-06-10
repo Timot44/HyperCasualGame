@@ -15,9 +15,16 @@ public class GameManager : MonoBehaviour
 	
 	[Header("SCORE")]
 	public ScoreManager scoreManager;
-	public int score;
-	public int bonus;
+	public float score;
+	public float multiplierToAdd = 1f;
+	public float multiplier = 1f;
+	public float speedToAddIfWrongEnemy;
+	
+	
 	public TextMeshPro textScore;
+	
+	private float _multiplierToAddMax;
+	private float _multiplierMax;
 	
 	private Camera cam;
 	private static GameManager _gameManager;
@@ -35,6 +42,8 @@ public class GameManager : MonoBehaviour
 
 	private void Start()
 	{
+		_multiplierToAddMax = multiplierToAdd;
+		_multiplierMax = multiplier;
 		cam = Camera.main;
 		if (postProcess.profile.TryGet(out DepthOfField depthOfField)) _depthOfField = depthOfField;
 	}
@@ -42,6 +51,23 @@ public class GameManager : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		if (Input.GetMouseButtonDown(0))
+		{
+			Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+
+			if (Physics.Raycast(ray, out var hit, Mathf.Infinity, layerEnemy))
+			{
+				hit.collider.TryGetComponent(out Enemy enemy);
+				hit.collider.TryGetComponent(out ScoreEnemy scoreEnemy);
+				
+				if (scoreEnemy.numberOfEnemy != scoreManager.enemiesInGoodOrder[0].numberOfEnemy)
+				{
+					enemy.moveSpeed += speedToAddIfWrongEnemy;
+				}
+			}
+		}
+		
+		
 		if(Input.GetMouseButton(0))
 		{
 			trailFinger.SetActive(true);
@@ -59,20 +85,35 @@ public class GameManager : MonoBehaviour
 
 			if (Physics.Raycast(ray, out var hit, Mathf.Infinity, layerEnemy))
 			{
-				if (hit.collider.name == scoreManager.enemiesInGoodOrder[0].name)
+				hit.collider.TryGetComponent(out ScoreEnemy scoreEnemy);
+				hit.collider.TryGetComponent(out Enemy enemy);
+				
+				if (scoreEnemy.numberOfEnemy == scoreManager.enemiesInGoodOrder[0].numberOfEnemy)
 				{
-					hit.collider.TryGetComponent(out ScoreEnemy scoreEnemy);
-					
 					scoreManager.enemiesInGoodOrder.Remove(scoreEnemy);
+					scoreManager.enemies.Remove(scoreEnemy);
+					
+					enemy.enemyHealth.TakeDamage(1);
 					
 					hit.collider.gameObject.SetActive(false);
 
+					multiplierToAdd += 0.01f;
 					score++;
-					textScore.text = $"Score : {score}";
+					
+					var addMultiplier = multiplier * multiplierToAdd;
+					
+					score *= addMultiplier;
+
+					var scoreCap = Mathf.Ceil(score);
+					
+					textScore.text = $"Score : {scoreCap}";
 				}
 				else
 				{
-					Debug.LogWarning("Wrong Enemy");
+					AudioManager.Instance.Play("ErrorSound");
+
+					multiplierToAdd = _multiplierToAddMax;
+					multiplier = _multiplierMax;
 				}
 			}
 		}
