@@ -1453,7 +1453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d4d31369981d1047af2158e93e0a895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: https://www.buymeacoffee.com/
+  url: https://www.buymeacoffee.com/fracturegame
   panelEnd: {fileID: 3531212252441242975}
   panelCredits: {fileID: 7759624949107612909}
 --- !u!1 &3531212253516224059
