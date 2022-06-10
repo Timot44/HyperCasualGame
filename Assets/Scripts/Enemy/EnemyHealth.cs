@@ -28,7 +28,13 @@ public class EnemyHealth: IDamageable
 
     private void EnemyDie()
     {
-        if (EnemyDeathEvent != null) EnemyDeathEvent();
+        if (EnemyDeathEvent != null)
+        {
+            AudioManager.Instance.Play("EnemyDeath");
+            EnemyDeathEvent();
+        }
+        
+        
     }
  
 }

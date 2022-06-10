@@ -13,7 +13,6 @@ public class Menu : MonoBehaviour
 
 	public void Play()
 	{
-		Handheld.Vibrate();
 		SceneManager.LoadScene(1);
 	}
 }

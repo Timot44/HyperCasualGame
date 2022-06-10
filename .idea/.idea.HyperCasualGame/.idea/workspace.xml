@@ -6,20 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="a1370263-6739-4d9d-895c-d84692191d7a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperCasualGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperCasualGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/10.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/10.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/4.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/5.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/6.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/6.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/7.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/7.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/8.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/8.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/9.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/9.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Canvas_UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Canvas_UI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Manager/AudioManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Manager/AudioManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayerManager.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayerManager.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyHealth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyHealth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameEnding.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameEnding.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Score/ScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Score/ScoreManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +23,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Score/ScoreEnemy.cs" root0="FORCE_HIGHLIGHTING" />
@@ -47,12 +50,15 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Score/ScoreEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" />
       <option value="$PROJECT_DIR$/Assets/AssetStore/LeanTween/Framework/LeanTweenExt.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Audio/Sound.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spawner/EnemySpawnerManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Score/ScoreManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyHealth.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameEnding.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ACsEQp5BMtwTlXP979xccwSKtx" />
@@ -107,7 +113,7 @@
       <workItem from="1654764218482" duration="5787000" />
       <workItem from="1654788503026" duration="3232000" />
       <workItem from="1654797968288" duration="394000" />
-      <workItem from="1654850931966" duration="7088000" />
+      <workItem from="1654850931966" duration="9334000" />
     </task>
     <servers />
   </component>

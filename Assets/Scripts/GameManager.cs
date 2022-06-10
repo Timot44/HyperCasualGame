@@ -16,10 +16,15 @@ public class GameManager : MonoBehaviour
 	[Header("SCORE")]
 	public ScoreManager scoreManager;
 	public float score;
-	public float multiplierToAdd = 0.1f;
+	public float multiplierToAdd = 1f;
 	public float multiplier = 1f;
-
+	public float speedToAddIfWrongEnemy;
+	
+	
 	public TextMeshPro textScore;
+	
+	private float _multiplierToAddMax;
+	private float _multiplierMax;
 	
 	private Camera cam;
 	private static GameManager _gameManager;
@@ -37,6 +42,8 @@ public class GameManager : MonoBehaviour
 
 	private void Start()
 	{
+		_multiplierToAddMax = multiplierToAdd;
+		_multiplierMax = multiplier;
 		cam = Camera.main;
 		if (postProcess.profile.TryGet(out DepthOfField depthOfField)) _depthOfField = depthOfField;
 	}
@@ -62,11 +69,10 @@ public class GameManager : MonoBehaviour
 			if (Physics.Raycast(ray, out var hit, Mathf.Infinity, layerEnemy))
 			{
 				hit.collider.TryGetComponent(out ScoreEnemy scoreEnemy);
+				hit.collider.TryGetComponent(out Enemy enemy);
 				
 				if (scoreEnemy.numberOfEnemy == scoreManager.enemiesInGoodOrder[0].numberOfEnemy)
 				{
-					hit.collider.TryGetComponent(out Enemy enemy);
-					
 					scoreManager.enemiesInGoodOrder.Remove(scoreEnemy);
 					scoreManager.enemies.Remove(scoreEnemy);
 					
@@ -87,8 +93,12 @@ public class GameManager : MonoBehaviour
 				}
 				else
 				{
-					multiplierToAdd = 0.1f;
-					multiplier = 1f;
+					AudioManager.Instance.Play("ErrorSound");
+
+					enemy.moveSpeed += speedToAddIfWrongEnemy;
+					
+					multiplierToAdd = _multiplierToAddMax;
+					multiplier = _multiplierMax;
 				}
 			}
 		}

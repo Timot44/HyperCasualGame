@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     
     [Header("MOVEMENT PARAMETERS")]
     [SerializeField] private Transform target;
-    [SerializeField] private float moveSpeed = 3f;
+    [SerializeField] public float moveSpeed = 3f;
     [SerializeField] private float rangeMovement = 1f;
     [SerializeField] private Vector3 targetOffset = Vector3.up;
     private PlayerHealth _playerHealth;
