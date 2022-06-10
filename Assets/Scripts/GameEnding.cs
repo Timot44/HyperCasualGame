@@ -20,7 +20,6 @@ public class GameEnding : MonoBehaviour
 
     public void OpenUrl()
     {
-        Debug.Log("Clicked");
         Application.OpenURL(url);
     }
 

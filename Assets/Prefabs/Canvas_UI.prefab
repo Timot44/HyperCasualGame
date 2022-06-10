@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5613545641450486584}
   - component: {fileID: 4149353210209315429}
+  - component: {fileID: 3695063084237808006}
   - component: {fileID: 6424168092616563248}
   m_Layer: 5
   m_Name: Text (TMP)
@@ -45,6 +46,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1115456590885037803}
   m_CullTransparentMesh: 1
+--- !u!114 &3695063084237808006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115456590885037803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6457db8d575a98c448fdf8c69a49b4f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6424168092616563248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,12 +80,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: "A game made in one week\n\n<b>As game dev</b> : Loann Courcoul, Timothe
     Rondeau\n\n<b>As game artist</b> and <b>game designer</b> : Quentin Brousson\n\n<b>Special
-    credit for :\nMusic :</b> <link=\"Music\">Freezing but warm - Ambient by Meydan
-    under Attribution 4.0 International (CC BY 4.0)\r \n no alterations were made
-    to the original work.</link>\n\n<b>Sound :</b> \nHeart beat : Moulaythami  [liens
-    du sons en hypertext] \nError sound : plasterbrain [liens du sons en hypertext]\nEnemy
-    die : greenvwbeetle [liens du sons en hypertext]\nButton : EminYILDIRIM [liens
-    du sons en hypertext]"
+    credit for :\nMusic :</b>\n<link=\"https://freemusicarchive.org/music/Meydan/Ambient_1860/Freezing_but_warm/\">Freezing
+    but warm - Ambient by Meydan under Attribution 4.0 International (CC BY 4.0)\r</link>\n
+    no alterations were made to the original work.\n\n<b>Sound :</b> \nHeart beat
+    : <link=\"https://freesound.org/people/Moulaythami/sounds/535478/\">Moulaythami</link>\nError
+    sound : <link=\"https://freesound.org/people/plasterbrain/sounds/423166/\">plasterbrain</link>\nEnemy
+    die : <link=\"https://freesound.org/people/greenvwbeetle/sounds/328118/\">greenvwbeetle</link>\nButton
+    : <link=\"https://freesound.org/people/EminYILDIRIM/sounds/536113/ \r\">EminYILDIRIM</link>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 562d2cbdef63b8d40bdef443b48ad108, type: 2}
   m_sharedMaterial: {fileID: 407974493556374429, guid: 562d2cbdef63b8d40bdef443b48ad108, type: 2}
@@ -99,7 +113,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33.3
+  m_fontSize: 31.25
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1259,7 +1273,7 @@ Canvas:
   m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
