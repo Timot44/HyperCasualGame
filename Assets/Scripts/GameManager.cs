@@ -8,9 +8,10 @@ using UnityEngine.Rendering.Universal;
 
 public class GameManager : MonoBehaviour
 {
-	[Header("TRAIL SETTINGS")]
+	[Header("TOUCH SETTINGS")]
 	public GameObject trailFinger;
 	public float distanceFromCamera = 5;
+	public LayerMask layerEnemy;
 	
 	[Header("SCORE")]
 	public ScoreManager scoreManager;
@@ -56,7 +57,7 @@ public class GameManager : MonoBehaviour
 		{
 			Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
-			if (Physics.Raycast(ray, out var hit))
+			if (Physics.Raycast(ray, out var hit, Mathf.Infinity, layerEnemy))
 			{
 				if (hit.collider.name == scoreManager.enemiesInGoodOrder[0].name)
 				{

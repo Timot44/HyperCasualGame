@@ -8,7 +8,7 @@ using Random = UnityEngine.Random;
 public class ScoreManager : MonoBehaviour
 {
 	public List<ScriptableObjectScore> scoreObjects;
-	public List<ScoreEnemy> enemies;
+	 public List<ScoreEnemy> enemies;
 	public List<ScoreEnemy> enemiesInGoodOrder;
 
 	public int maxEnemyNumber;
@@ -28,8 +28,18 @@ public class ScoreManager : MonoBehaviour
 	#endregion
 
 	// Update is called once per frame
-	void Start()
+	public void MechanicLaunched()
 	{
+		var enemySpawnerManager = EnemySpawnerManager.Instance;
+		
+		foreach (var e in enemySpawnerManager.currentEnemiesInWave)
+		{
+			if (e.TryGetComponent(out ScoreEnemy scoreEnemy))
+			{
+				enemies.Add(scoreEnemy);
+			}
+		}
+		
 		var newList = new List<ScriptableObjectScore>(scoreObjects);
 
 		for (int i = maxEnemyNumber - enemies.Count - 1; i >= 0; i--)

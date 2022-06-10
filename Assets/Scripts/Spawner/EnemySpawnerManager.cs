@@ -9,7 +9,7 @@ public class EnemySpawnerManager : MonoBehaviour
 
     public List<Wave> waves = new List<Wave>();
     [SerializeField]
-    private int waveCount = 0;
+    public int waveCount = 0;
     [SerializeField] private float maxTimeBetweenWaves = 2f;
     [SerializeField] private float waveCountdown;
     public List<Enemy> currentEnemiesInWave = new List<Enemy>();
@@ -82,7 +82,11 @@ public class EnemySpawnerManager : MonoBehaviour
         var randomSpawnTransform = enemySpawnPoints[Random.Range(0, enemySpawnPoints.Length)];
         var enemy = Instantiate(wave.enemies[Random.Range(0, wave.enemies.Length)], randomSpawnTransform.position, Quaternion.identity);
         currentEnemiesInWave.Add(enemy);
-        if (currentEnemiesInWave.Count == wave.numberOfEnemyWave) isAllEnemiesSpawned = true;
+        if (currentEnemiesInWave.Count == wave.numberOfEnemyWave)
+        {
+            ScoreManager.Instance.MechanicLaunched();
+            isAllEnemiesSpawned = true;
+        }
 
     }
 
