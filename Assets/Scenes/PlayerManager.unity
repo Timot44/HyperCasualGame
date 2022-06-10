@@ -992,10 +992,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScoreManager
       objectReference: {fileID: 0}
-    - target: {fileID: 4930973581398969423, guid: 674754c4c821cc3408b77eca58f9797c, type: 3}
-      propertyPath: enemies.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 674754c4c821cc3408b77eca58f9797c, type: 3}
 --- !u!1001 &7668865681306796099
@@ -1064,6 +1060,18 @@ PrefabInstance:
     - target: {fileID: 7668865680756223855, guid: 11bb80a3498f3db46b59a52dcb9606f2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668865680943081100, guid: 11bb80a3498f3db46b59a52dcb9606f2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668865680943081100, guid: 11bb80a3498f3db46b59a52dcb9606f2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668865680943081100, guid: 11bb80a3498f3db46b59a52dcb9606f2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.43
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11bb80a3498f3db46b59a52dcb9606f2, type: 3}

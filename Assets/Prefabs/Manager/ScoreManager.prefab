@@ -50,9 +50,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 37a065866c881524aac5774b9100fa3c, type: 2}
   - {fileID: 11400000, guid: c9cc8c1d128d1ed4f9c9dca620928b2e, type: 2}
   - {fileID: 11400000, guid: 1f4af1cda8ce75e4495c2ce10fe165c6, type: 2}
-  enemies:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: c39e6c32391ecfa4b8f56bb544ff9869, type: 2}
+  - {fileID: 11400000, guid: fe766ff4aef1704459874d06ce0615fe, type: 2}
+  - {fileID: 11400000, guid: 8c25b0f122c21be41baff1106d423a7c, type: 2}
+  - {fileID: 11400000, guid: 8ab40dbb1c4ea834099fac1232624e8e, type: 2}
+  enemies: []
   enemiesInGoodOrder: []
-  maxEnemyNumber: 5
+  maxEnemyNumber: 10

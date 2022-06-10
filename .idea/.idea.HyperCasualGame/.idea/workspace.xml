@@ -6,10 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="a1370263-6739-4d9d-895c-d84692191d7a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperCasualGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperCasualGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Audio/MainMixer.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/MainMixer.mixer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Manager/ScoreManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Manager/ScoreManager.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayerManager.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayerManager.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/Sound.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/Sound.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Score/ScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Score/ScoreManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,11 +40,11 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" />
       <option value="$PROJECT_DIR$/Assets/AssetStore/LeanTween/Framework/LeanTweenExt.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Audio/Sound.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Spawner/EnemySpawnerManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Score/ScoreManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Audio/Sound.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ACsEQp5BMtwTlXP979xccwSKtx" />
@@ -97,7 +99,7 @@
       <workItem from="1654764218482" duration="5787000" />
       <workItem from="1654788503026" duration="3232000" />
       <workItem from="1654797968288" duration="394000" />
-      <workItem from="1654850931966" duration="3956000" />
+      <workItem from="1654850931966" duration="5434000" />
     </task>
     <servers />
   </component>

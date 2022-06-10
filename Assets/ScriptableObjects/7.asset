@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c32672b83c1e3844399c82fb965d5690, type: 3}
-  m_Name: 4
+  m_Name: 7
   m_EditorClassIdentifier: 
-  numberEnemy: 4
+  numberEnemy: 7
   possibilityOfStrings:
-  - 3-2+3
-  - 4-1+1
-  - 2+2
-  - 2*2
-  - 6*2-8
+  - 3+4
+  - 2+5
+  - 1+6
+  - 2*2+3
+  - 14/2

@@ -66,7 +66,8 @@ public class GameManager : MonoBehaviour
 					hit.collider.TryGetComponent(out Enemy enemy);
 					
 					scoreManager.enemiesInGoodOrder.Remove(scoreEnemy);
-					scoreManager.enemies = scoreManager.enemiesInGoodOrder;
+					scoreManager.enemies.Remove(scoreEnemy);
+					
 					enemy.enemyHealth.TakeDamage(1);
 					
 					hit.collider.gameObject.SetActive(false);
@@ -75,6 +76,8 @@ public class GameManager : MonoBehaviour
 					score++;
 					
 					var addMultiplier = score * multiplierToAdd;
+					Debug.Log(addMultiplier);
+					
 					score += addMultiplier;
 
 					var scoreCap = Mathf.Ceil(score);
@@ -83,7 +86,7 @@ public class GameManager : MonoBehaviour
 				}
 				else
 				{
-					Debug.LogWarning("Wrong Enemy");
+					multiplierToAdd = 0.1f;
 				}
 			}
 		}
