@@ -15,8 +15,9 @@ public class GameManager : MonoBehaviour
 	
 	[Header("SCORE")]
 	public ScoreManager scoreManager;
-	public int score;
-	public int bonus;
+	public float score;
+	public float multiplierToAdd = 0.1f;
+
 	public TextMeshPro textScore;
 	
 	private Camera cam;
@@ -62,13 +63,23 @@ public class GameManager : MonoBehaviour
 				if (hit.collider.name == scoreManager.enemiesInGoodOrder[0].name)
 				{
 					hit.collider.TryGetComponent(out ScoreEnemy scoreEnemy);
+					hit.collider.TryGetComponent(out Enemy enemy);
 					
 					scoreManager.enemiesInGoodOrder.Remove(scoreEnemy);
+					scoreManager.enemies = scoreManager.enemiesInGoodOrder;
+					enemy.enemyHealth.TakeDamage(1);
 					
 					hit.collider.gameObject.SetActive(false);
 
+					multiplierToAdd += 0.01f;
 					score++;
-					textScore.text = $"Score : {score}";
+					
+					var addMultiplier = score * multiplierToAdd;
+					score += addMultiplier;
+
+					var scoreCap = Mathf.Ceil(score);
+					
+					textScore.text = $"Score : {scoreCap}";
 				}
 				else
 				{
