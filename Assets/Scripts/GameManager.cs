@@ -51,6 +51,23 @@ public class GameManager : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		if (Input.GetMouseButtonDown(0))
+		{
+			Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+
+			if (Physics.Raycast(ray, out var hit, Mathf.Infinity, layerEnemy))
+			{
+				hit.collider.TryGetComponent(out Enemy enemy);
+				hit.collider.TryGetComponent(out ScoreEnemy scoreEnemy);
+				
+				if (scoreEnemy.numberOfEnemy != scoreManager.enemiesInGoodOrder[0].numberOfEnemy)
+				{
+					enemy.moveSpeed += speedToAddIfWrongEnemy;
+				}
+			}
+		}
+		
+		
 		if(Input.GetMouseButton(0))
 		{
 			trailFinger.SetActive(true);
@@ -95,8 +112,6 @@ public class GameManager : MonoBehaviour
 				{
 					AudioManager.Instance.Play("ErrorSound");
 
-					enemy.moveSpeed += speedToAddIfWrongEnemy;
-					
 					multiplierToAdd = _multiplierToAddMax;
 					multiplier = _multiplierMax;
 				}

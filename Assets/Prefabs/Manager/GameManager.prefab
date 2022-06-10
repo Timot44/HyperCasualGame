@@ -53,6 +53,8 @@ MonoBehaviour:
   scoreManager: {fileID: 0}
   score: 0
   multiplierToAdd: 1
+  multiplier: 1
+  speedToAddIfWrongEnemy: 0.1
   textScore: {fileID: 7668865680943081107}
   panelGameOver: {fileID: 0}
   postProcess: {fileID: 4999001049085514677}

@@ -52,7 +52,11 @@ public class Enemy : MonoBehaviour
 
    protected virtual void OnEnemyDeathEvent()
    {
-       //TODO VFX explosion enemy
+       TryGetComponent(out ScoreEnemy scoreEnemy);
+       
+       ScoreManager.Instance.enemiesInGoodOrder.Remove(scoreEnemy);
+       ScoreManager.Instance.enemies.Remove(scoreEnemy);
+       
        var deathParticle = PoolManager.Instance.SpawnObjectFromPool("EnemyDeathParticle", transform.position, Quaternion.identity, null);
        PoolManager.Instance.ReturnObjectToFalse(deathParticle, "EnemyDeathParticle");
        Destroy(gameObject);

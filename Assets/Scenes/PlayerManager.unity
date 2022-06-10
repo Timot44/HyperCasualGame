@@ -204,6 +204,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e93a6d8a13da7b44e8d28f3c47523e67, type: 3}
+--- !u!114 &391956109 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4550043390330960360, guid: e4466eab489828248baa2a9c159543ab, type: 3}
+  m_PrefabInstance: {fileID: 456637664}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &456637664
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -616,6 +627,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26d9b4e64f94d3e418dd747c0406a97a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1746374058 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3531212252673551259, guid: e4466eab489828248baa2a9c159543ab, type: 3}
+  m_PrefabInstance: {fileID: 456637664}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1813272452
@@ -1092,6 +1114,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4017539767976411491, guid: 871c5a83d3b3f894ea12e29725de80df, type: 3}
+      propertyPath: textScore
+      value: 
+      objectReference: {fileID: 1746374058}
+    - target: {fileID: 4017539767976411491, guid: 871c5a83d3b3f894ea12e29725de80df, type: 3}
+      propertyPath: textHighScore
+      value: 
+      objectReference: {fileID: 391956109}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 871c5a83d3b3f894ea12e29725de80df, type: 3}
 --- !u!1001 &3113689079297716030
@@ -1227,6 +1257,10 @@ PrefabInstance:
       propertyPath: panelGameOver
       value: 
       objectReference: {fileID: 456637665}
+    - target: {fileID: 7668865680756223848, guid: 11bb80a3498f3db46b59a52dcb9606f2, type: 3}
+      propertyPath: speedToAddIfWrongEnemy
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7668865680756223849, guid: 11bb80a3498f3db46b59a52dcb9606f2, type: 3}
       propertyPath: m_Name
       value: GameManager
