@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -6,12 +7,12 @@ public class Enemy : MonoBehaviour
 {
     
     public EnemyHealth enemyHealth;
-  
+    
     [Header("MOVEMENT PARAMETERS")]
     [SerializeField] private Transform target;
     [SerializeField] private float moveSpeed = 3f;
     [SerializeField] private float rangeMovement = 1f;
-    
+    [SerializeField] private Vector3 targetOffset = Vector3.up;
     private PlayerHealth _playerHealth;
     private string _playerTag = "Player";
     protected virtual void Awake()
@@ -38,7 +39,7 @@ public class Enemy : MonoBehaviour
    {
        if (Vector3.Distance(transform.position, target.position) > rangeMovement)
        {
-           transform.position = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+           transform.position = Vector3.MoveTowards(transform.position, target.position + targetOffset, moveSpeed * Time.deltaTime);
        }
        
    }
@@ -46,15 +47,19 @@ public class Enemy : MonoBehaviour
    protected virtual void RotateTowardPlayer()
    {
        var lookForward = target.position - transform.position;
-       transform.rotation = Quaternion.LookRotation(lookForward, Vector3.up);
+       transform.rotation = Quaternion.LookRotation(lookForward + targetOffset, Vector3.up);
    }
 
    protected virtual void OnEnemyDeathEvent()
    {
        //TODO VFX explosion enemy
+       var deathParticle = PoolManager.Instance.SpawnObjectFromPool("EnemyDeathParticle", transform.position, Quaternion.identity, null);
+       PoolManager.Instance.ReturnObjectToFalse(deathParticle, "EnemyDeathParticle");
        Destroy(gameObject);
+       if (EnemySpawnerManager.Instance != null) EnemySpawnerManager.Instance.CheckAllEnemiesWave(this);
    }
 
+  
    private void OnTriggerEnter(Collider other)
    {
        if (other.gameObject.CompareTag(_playerTag))
