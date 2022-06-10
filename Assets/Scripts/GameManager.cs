@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
 					multiplierToAdd += 0.01f;
 					score++;
 					
-					var addMultiplier = score * multiplierToAdd;
+					var addMultiplier = score + multiplierToAdd;
 					Debug.Log(addMultiplier);
 					
 					score += addMultiplier;
