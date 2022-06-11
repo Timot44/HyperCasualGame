@@ -24,7 +24,6 @@ public class EnemySpawnerManager : MonoBehaviour
     
     [SerializeField] private Transform[] enemySpawnPoints;
     public bool isAllEnemiesSpawned;
-    [SerializeField]
     private List<Transform> _possibleEnemySpawnPoints = new List<Transform>();
     [Header("NEXT WAVE PARAMETERS")] [SerializeField]
     private int maxEnemiesInWave = 6;

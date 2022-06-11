@@ -46,7 +46,7 @@ MonoBehaviour:
   waves:
   - waveName: Wave 0
     numberOfEnemyWave: 3
-    enemySpawnRate: 1
+    enemySpawnRate: 0.8
     enemies:
     - {fileID: 689477504072760405, guid: 2497f25eb91de854bb9a540b55cf8f64, type: 3}
   waveCount: 0
@@ -61,6 +61,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   isAllEnemiesSpawned: 0
+  _possibleEnemySpawnPoints: []
   maxEnemiesInWave: 8
   minEnemySpawnRateTimer: 0.4
   numberOfEnemiesToAddNextWave: 1
