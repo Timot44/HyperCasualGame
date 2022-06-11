@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
                 {
                     enemy.moveSpeed += speedToAddIfWrongEnemy;
                     var enemyTransform = enemy.transform;
-                    var wrongParticle = PoolManager.Instance.SpawnObjectFromPool("WrongParticle",enemyTransform.position, Quaternion.identity, enemyTransform);
+                    var wrongParticle = PoolManager.Instance.SpawnObjectFromPool("WrongParticle", enemyTransform.position, Quaternion.identity, enemyTransform);
                     PoolManager.Instance.ReturnObjectToFalse(wrongParticle, "WrongParticle");
                 }
             }
@@ -112,6 +112,7 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
+                   
                     AudioManager.Instance.Play("ErrorSound");
                     multiplierToAdd = _multiplierToAddMax;
                     multiplier = _multiplierMax;
