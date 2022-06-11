@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1370263-6739-4d9d-895c-d84692191d7a" name="Changes" comment="" />
+    <list default="true" id="a1370263-6739-4d9d-895c-d84692191d7a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperCasualGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperCasualGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Canvas_UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Canvas_UI.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawner/EnemySpawnerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawner/EnemySpawnerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,6 +107,7 @@
       <workItem from="1654788503026" duration="3232000" />
       <workItem from="1654797968288" duration="394000" />
       <workItem from="1654850931966" duration="11525000" />
+      <workItem from="1654940512168" duration="960000" />
     </task>
     <servers />
   </component>
