@@ -16,7 +16,6 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     public List<GameObject> gameObjectToReplace;
 
     [SerializeField] private ParticleSystem playerPulsingParticle;
-    public static int highScore;
 
     public void Start()
     {
