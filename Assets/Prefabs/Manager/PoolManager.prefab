@@ -43,12 +43,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fc3ef2f8e378774e8b2feb5ef1b823d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pools:
-  - poolTag: EnemyDeathParticle
-    prefab: {fileID: 6997794869268309224, guid: 24f842a3bdebc234aa4539c9f4da72ba, type: 3}
-    delayToSetFalsePrefab: 1
-    poolSize: 10
-  - poolTag: WrongParticle
-    prefab: {fileID: 712690805949562369, guid: 16c482e1bacf44e4794b7a35c9c50f03, type: 3}
-    delayToSetFalsePrefab: 1
-    poolSize: 10
+  pools: []

@@ -130,6 +130,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyHealth:
     maxHealth: 1
+  vfxDeath: {fileID: 3010158798128440334, guid: 24f842a3bdebc234aa4539c9f4da72ba, type: 3}
+  vfxWrongParticle: {fileID: 4644020057626975962, guid: 16c482e1bacf44e4794b7a35c9c50f03, type: 3}
   target: {fileID: 0}
   moveSpeed: 1.5
   rangeMovement: 1

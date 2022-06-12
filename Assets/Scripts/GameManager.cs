@@ -64,8 +64,7 @@ public class GameManager : MonoBehaviour
                 {
                     enemy.moveSpeed += speedToAddIfWrongEnemy;
                     var enemyTransform = enemy.transform;
-                    var wrongParticle = PoolManager.Instance.SpawnObjectFromPool("WrongParticle", enemyTransform.position, Quaternion.identity, enemyTransform);
-                    PoolManager.Instance.ReturnObjectToFalse(wrongParticle, "WrongParticle");
+                    Destroy(Instantiate(enemy.vfxWrongParticle.gameObject, enemyTransform.position, Quaternion.identity, enemyTransform), enemy.vfxWrongParticle.main.startLifetime.constant);
                 }
             }
         }
