@@ -61,7 +61,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   isAllEnemiesSpawned: 0
-  _possibleEnemySpawnPoints: []
   maxEnemiesInWave: 8
   minEnemySpawnRateTimer: 0.4
   numberOfEnemiesToAddNextWave: 1
