@@ -24,7 +24,7 @@ public class EnemySpawnerManager : MonoBehaviour
     
     [SerializeField] private Transform[] enemySpawnPoints;
     public bool isAllEnemiesSpawned;
-
+    private List<Transform> _possibleEnemySpawnPoints = new List<Transform>();
     [Header("NEXT WAVE PARAMETERS")] [SerializeField]
     private int maxEnemiesInWave = 6;
     [SerializeField] private float minEnemySpawnRateTimer = 0.5f;
@@ -67,7 +67,7 @@ public class EnemySpawnerManager : MonoBehaviour
    private IEnumerator SpawnWave(Wave wave)
     {
         var waitForSecondsEnemySpawnRate = new WaitForSeconds(wave.enemySpawnRate);
-     
+        _possibleEnemySpawnPoints.AddRange(enemySpawnPoints);
         for (var i = 0; i < wave.numberOfEnemyWave; i++)
         {
             SpawnEnemy(wave);
@@ -79,13 +79,20 @@ public class EnemySpawnerManager : MonoBehaviour
     private void SpawnEnemy(Wave wave)
     {
         //Pick a random spawn point 
-        var randomSpawnTransform = enemySpawnPoints[Random.Range(0, enemySpawnPoints.Length)];
+        var randomSpawnTransform = _possibleEnemySpawnPoints[Random.Range(0, _possibleEnemySpawnPoints.Count)];
         var enemy = Instantiate(wave.enemies[Random.Range(0, wave.enemies.Length)], randomSpawnTransform.position, Quaternion.identity);
         currentEnemiesInWave.Add(enemy);
+        _possibleEnemySpawnPoints.Remove(randomSpawnTransform);
+        if (_possibleEnemySpawnPoints.Count <= 0)
+        {
+            _possibleEnemySpawnPoints.AddRange(enemySpawnPoints);
+        }
+        
         if (currentEnemiesInWave.Count == wave.numberOfEnemyWave)
         {
             ScoreManager.Instance.MechanicLaunched();
             isAllEnemiesSpawned = true;
+            _possibleEnemySpawnPoints.Clear();
         }
 
     }
