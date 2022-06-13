@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
 
 
     public TextMeshPro textScore;
-
+    public TextMeshPro textWave;
     private float _multiplierToAddMax;
 
     private Camera cam;
