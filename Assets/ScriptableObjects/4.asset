@@ -16,6 +16,5 @@ MonoBehaviour:
   possibilityOfStrings:
   - 3-2+3
   - 4-1+1
-  - 4-4+2+2
-  - 2*2
-  - 6*2-8
+  - 2x2
+  - 6x2-8
