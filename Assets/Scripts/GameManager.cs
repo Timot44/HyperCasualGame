@@ -15,14 +15,12 @@ public class GameManager : MonoBehaviour
     [Header("SCORE")] public ScoreManager scoreManager;
     public float score;
     public float multiplierToAdd = 1f;
-    public float multiplier = 1f;
     public float speedToAddIfWrongEnemy;
 
 
     public TextMeshPro textScore;
 
     private float _multiplierToAddMax;
-    private float _multiplierMax;
 
     private Camera cam;
     private static GameManager _gameManager;
@@ -44,7 +42,6 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         _multiplierToAddMax = multiplierToAdd;
-        _multiplierMax = multiplier;
         cam = Camera.main;
         if (postProcess.profile.TryGet(out DepthOfField depthOfField)) _depthOfField = depthOfField;
     }
@@ -97,13 +94,11 @@ public class GameManager : MonoBehaviour
                     enemy.enemyHealth.TakeDamage(1);
 
                     hit.collider.gameObject.SetActive(false);
-
-                    multiplierToAdd += 0.01f;
+                    
                     score++;
+                    multiplierToAdd++;
 
-                    var addMultiplier = multiplier * multiplierToAdd;
-
-                    score *= addMultiplier;
+                    score += multiplierToAdd;
 
                     var scoreCap = Mathf.Ceil(score);
 
@@ -114,7 +109,6 @@ public class GameManager : MonoBehaviour
                    
                     AudioManager.Instance.Play("ErrorSound");
                     multiplierToAdd = _multiplierToAddMax;
-                    multiplier = _multiplierMax;
                 }
             }
         }
