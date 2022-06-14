@@ -10,7 +10,7 @@ public class ScoreManager : MonoBehaviour
 	public List<ScriptableObjectScore> scoreObjects;
 	public List<ScoreEnemy> enemies;
 	public List<ScoreEnemy> enemiesInGoodOrder;
-
+	
 	public int maxEnemyNumber;
 
 	#region Singleton
@@ -42,30 +42,32 @@ public class ScoreManager : MonoBehaviour
 				enemies.Add(scoreEnemy);
 			}
 		}
-		
-		var newList = new List<ScriptableObjectScore>(scoreObjects);
 
+		var soListNumber = new List<ScriptableObjectScore>(scoreObjects);
+			
 		for (int i = maxEnemyNumber - enemies.Count - 1; i >= 0; i--)
 		{
-			var maxValue = Mathf.Max(newList.Count);
-			newList.RemoveAt(maxValue - 1);
+			soListNumber.RemoveAt(soListNumber.Count - 1);
 		}
 
+		var rSo = 0;
 		for (int i = 0; i < enemies.Count; i++)
 		{
-			var numberList = newList.Count;
-			var rSo = Random.Range(0, numberList);
+			while (rSo > enemies.Count)
+			{
+				rSo = Random.Range(enemies[i].spawnInListMin, enemies[i].spawnInListMax);// random number with exceptions
+			}
+			
+			enemies[i].numberOfEnemy = soListNumber[rSo].numberEnemy; // numberEnemy is equal to so[rSo]
 
-			enemies[i].numberOfEnemy = newList[rSo].numberEnemy;
-
-			var rTMP = Random.Range(0, newList[rSo].possibilityOfStrings.Count);
-			enemies[i].textOnEnemy.text = newList[rSo].possibilityOfStrings[rTMP];
+			var rTMP = Random.Range(0, soListNumber[rSo].possibilityOfStrings.Count); // rTMP to display on top of enemy
+			enemies[i].textOnEnemy.text = soListNumber[rSo].possibilityOfStrings[rTMP];
 
 			enemiesInGoodOrder.Add(enemies[i]);
 
-			newList.RemoveAt(rSo);
+			soListNumber.RemoveAt(rSo);
 		}
 
-		enemiesInGoodOrder = enemiesInGoodOrder.OrderBy(ch => ch.numberOfEnemy).ToList();
+		enemiesInGoodOrder = enemiesInGoodOrder.OrderBy(ch => ch.numberOfEnemy).ToList(); // Put the enemy in the right order
 	}
 }
