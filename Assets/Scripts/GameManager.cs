@@ -106,7 +106,6 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
-                   
                     AudioManager.Instance.Play("ErrorSound");
                     multiplierToAdd = _multiplierToAddMax;
                 }

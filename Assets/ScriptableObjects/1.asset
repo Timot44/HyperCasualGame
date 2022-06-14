@@ -14,4 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numberEnemy: 1
   possibilityOfStrings:
-  - 1
+  - 9-8
+  - 6-4-1
+  - 2x2-3
+  - 3-2
+  - 3-1-1
