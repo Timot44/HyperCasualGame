@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1370263-6739-4d9d-895c-d84692191d7a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperCasualGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperCasualGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fracture-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fracture-logo.png" afterDir="false" />
-    </list>
+    <list default="true" id="a1370263-6739-4d9d-895c-d84692191d7a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -110,7 +107,7 @@
       <workItem from="1655043467522" duration="2038000" />
       <workItem from="1655061270041" duration="3075000" />
       <workItem from="1655115266559" duration="49000" />
-      <workItem from="1655118241738" duration="1587000" />
+      <workItem from="1655118241738" duration="1747000" />
     </task>
     <servers />
   </component>
