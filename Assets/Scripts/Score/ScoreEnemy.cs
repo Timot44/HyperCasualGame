@@ -9,20 +9,20 @@ public class ScoreEnemy : MonoBehaviour
     public int numberOfEnemy;
     public TextMeshPro textOnEnemy;
 
-    [HideInInspector] public int spawnInListMin, spawnInListMax;
+    [HideInInspector] public int spawnInListRemove;
 
     private void Start()
     {
 	    switch (numberOfEnemy)
 	    {
-		    case 0 : spawnInListMin = 0; spawnInListMax = 4; break;
-		    case 1 : spawnInListMin = 0; spawnInListMax = 5; break;
-		    case 2 : spawnInListMin = 0; spawnInListMax = 6; break;
-		    case 3 : spawnInListMin = 0; spawnInListMax = 7; break;
-		    case 4 : spawnInListMin = 0; spawnInListMax = 8; break;
-		    case 5 : spawnInListMin = 2; spawnInListMax = 8; break;
-		    case 6 : spawnInListMin = 3; spawnInListMax = 8; break;
-		    case 7 : spawnInListMin = 3; spawnInListMax = 8; break;
+		    case 0 : spawnInListRemove = 3; break;
+		    case 1 : spawnInListRemove = 2; break;
+		    case 2 : spawnInListRemove = 1; break;
+		    case 3 : spawnInListRemove = 0; break;
+		    case 4 : spawnInListRemove = 0; break;
+		    case 5 : spawnInListRemove = 0; break;
+		    case 6 : spawnInListRemove = 0; break;
+		    case 7 : spawnInListRemove = 0; break;
 	    }
     }
 }

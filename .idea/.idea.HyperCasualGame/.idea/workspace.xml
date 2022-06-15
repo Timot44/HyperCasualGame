@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a1370263-6739-4d9d-895c-d84692191d7a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperCasualGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperCasualGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayerManager.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayerManager.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Score/ScoreEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Score/ScoreEnemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Score/ScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Score/ScoreManager.cs" afterDir="false" />
     </list>
@@ -112,7 +111,8 @@
       <workItem from="1655043467522" duration="2038000" />
       <workItem from="1655061270041" duration="3075000" />
       <workItem from="1655115266559" duration="5831000" />
-      <workItem from="1655204638802" duration="1719000" />
+      <workItem from="1655204638802" duration="3391000" />
+      <workItem from="1655290667026" duration="1485000" />
     </task>
     <servers />
   </component>
