@@ -16,12 +16,15 @@ public class GameManager : MonoBehaviour
     public float score;
     public float multiplierToAdd = 1f;
     public float speedToAddIfWrongEnemy;
-
-
+    
     public TextMeshPro textScore;
     public TextMeshPro textWave;
-    private float _multiplierToAddMax;
+    public TextMeshProUGUI textMultiplier;
 
+    public GameObject particleSystemMultiplier;
+    
+    private float _multiplierToAddMax;
+    
     private Camera cam;
     private static GameManager _gameManager;
     public static GameManager Instance => _gameManager;
@@ -103,6 +106,9 @@ public class GameManager : MonoBehaviour
                     var scoreCap = Mathf.Ceil(score);
 
                     textScore.text = $"Score : {scoreCap}";
+                    textMultiplier.text = $"+{multiplierToAdd}";
+                    
+                    Instantiate(particleSystemMultiplier, hit.transform.position + new Vector3(0,3,0), Quaternion.identity);
                 }
                 else
                 {
