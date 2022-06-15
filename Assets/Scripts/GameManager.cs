@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
 
 
     public TextMeshPro textScore;
-
+    public TextMeshPro textWave;
     private float _multiplierToAddMax;
 
     private Camera cam;
@@ -106,7 +106,6 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
-                   
                     AudioManager.Instance.Play("ErrorSound");
                     multiplierToAdd = _multiplierToAddMax;
                 }

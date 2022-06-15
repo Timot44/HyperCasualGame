@@ -9,7 +9,7 @@ public class EnemySpawnerManager : MonoBehaviour
 
     public List<Wave> waves = new List<Wave>();
     [SerializeField]
-    public int waveCount = 0;
+    public int waveCount;
     [SerializeField] private float maxTimeBetweenWaves = 2f;
     [SerializeField] private float waveCountdown;
     public List<Enemy> currentEnemiesInWave = new List<Enemy>();
@@ -21,7 +21,6 @@ public class EnemySpawnerManager : MonoBehaviour
     };
     
     public WaveState waveState;
-    
     [SerializeField] private Transform[] enemySpawnPoints;
     public bool isAllEnemiesSpawned;
     private List<Transform> _possibleEnemySpawnPoints = new List<Transform>();
@@ -67,6 +66,7 @@ public class EnemySpawnerManager : MonoBehaviour
    private IEnumerator SpawnWave(Wave wave)
     {
         var waitForSecondsEnemySpawnRate = new WaitForSeconds(wave.enemySpawnRate);
+        if (GameManager.Instance != null) GameManager.Instance.textWave.text = $"Wave {waveCount + 1}";
         _possibleEnemySpawnPoints.AddRange(enemySpawnPoints);
         for (var i = 0; i < wave.numberOfEnemyWave; i++)
         {
@@ -122,10 +122,11 @@ public class EnemySpawnerManager : MonoBehaviour
         var numberOfEnemyWave = newNumberOfEnemyWave <= maxEnemiesInWave ? newNumberOfEnemyWave : lastWave.numberOfEnemyWave;
         var enemySpawnRate = newEnemySpawnRate >= minEnemySpawnRateTimer ? newEnemySpawnRate : lastWave.enemySpawnRate;
         
-        var newWave = new Wave($"Wave {waveCount + 1}", numberOfEnemyWave, enemySpawnRate, lastWave.enemies);
+        waveCount++;
+        var newWave = new Wave($"Wave {waveCount}", numberOfEnemyWave, enemySpawnRate, lastWave.enemies);
         
         waves.Add(newWave);
-        waveCount++;
+        
         waveState = WaveState.Spawning;
     }
 

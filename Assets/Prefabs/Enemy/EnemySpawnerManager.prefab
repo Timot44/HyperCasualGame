@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - waveName: Wave 0
+  - waveName: Wave 1
     numberOfEnemyWave: 3
     enemySpawnRate: 0.8
     enemies:
