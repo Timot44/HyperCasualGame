@@ -58,7 +58,7 @@ public class Enemy : MonoBehaviour
 
         ScoreManager.Instance.enemiesInGoodOrder.Remove(scoreEnemy);
         ScoreManager.Instance.enemies.Remove(scoreEnemy);
-        Destroy(Instantiate(vfxDeath.gameObject, transform.position, Quaternion.identity), vfxDeath.main.startLifetime.constant);
+        Destroy(Instantiate(vfxDeath.gameObject, transform.position, Quaternion.identity), vfxDeath.main.duration);
         Destroy(gameObject);
         if (EnemySpawnerManager.Instance != null) EnemySpawnerManager.Instance.CheckAllEnemiesWave(this);
     }
