@@ -65,3 +65,16 @@ MonoBehaviour:
   minEnemySpawnRateTimer: 0.4
   numberOfEnemiesToAddNextWave: 1
   reducingWaveTimeRate: 0.05
+  enemyDifficulties:
+  - name: Difficulty 1
+    scriptableObjectScores: []
+    enemyDifficultyNumber: 0
+  - name: Difficulty 2
+    scriptableObjectScores: []
+    enemyDifficultyNumber: 0
+  - name: Difficulty 3
+    scriptableObjectScores: []
+    enemyDifficultyNumber: 0
+  - name: Difficulty 4
+    scriptableObjectScores: []
+    enemyDifficultyNumber: 0
