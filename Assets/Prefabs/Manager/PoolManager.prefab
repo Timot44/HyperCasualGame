@@ -43,4 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fc3ef2f8e378774e8b2feb5ef1b823d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pools: []
+  pools:
+  - poolTag: FloatingText
+    prefab: {fileID: 5834122130174275826, guid: edf485e9f129ecd4eaa8875a19540433, type: 3}
+    poolSize: 5

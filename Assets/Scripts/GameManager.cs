@@ -107,7 +107,10 @@ public class GameManager : MonoBehaviour
                     textScore.text = $"Score : {scoreCap}";
 
                     var floating = Instantiate(floatingText, hit.transform.position + new Vector3(0,3,0), Quaternion.identity);
-                    floating.GetComponent<TextMeshPro>().text = $"+{multiplierToAdd}";
+                    if (floating.TryGetComponent(out TextMeshPro textMeshPro))
+                    {
+                        textMeshPro.text = $"+{multiplierToAdd}";
+                    }
                 }
                 else
                 {

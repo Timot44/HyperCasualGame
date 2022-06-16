@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a1370263-6739-4d9d-895c-d84692191d7a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperCasualGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperCasualGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animation/AnimationFloatingText.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animation/AnimationFloatingText.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Manager/PoolManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Manager/PoolManager.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PoolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PoolManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +54,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Score/ScoreEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Score/ScoreManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Score/FloatingText.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PoolManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
     </changedPaths>
   </component>
@@ -115,7 +119,7 @@
       <workItem from="1655115266559" duration="5831000" />
       <workItem from="1655204638802" duration="3391000" />
       <workItem from="1655290667026" duration="2721000" />
-      <workItem from="1655374905852" duration="1579000" />
+      <workItem from="1655374905852" duration="2463000" />
     </task>
     <servers />
   </component>
