@@ -19,9 +19,8 @@ public class GameManager : MonoBehaviour
     
     public TextMeshPro textScore;
     public TextMeshPro textWave;
-    public TextMeshProUGUI textMultiplier;
 
-    public GameObject particleSystemMultiplier;
+    public GameObject floatingText;
     
     private float _multiplierToAddMax;
     
@@ -106,9 +105,9 @@ public class GameManager : MonoBehaviour
                     var scoreCap = Mathf.Ceil(score);
 
                     textScore.text = $"Score : {scoreCap}";
-                    textMultiplier.text = $"+{multiplierToAdd}";
-                    
-                    Instantiate(particleSystemMultiplier, hit.transform.position + new Vector3(0,3,0), Quaternion.identity);
+
+                    var floating = Instantiate(floatingText, hit.transform.position + new Vector3(0,3,0), Quaternion.identity);
+                    floating.GetComponent<TextMeshPro>().text = $"+{multiplierToAdd}";
                 }
                 else
                 {
