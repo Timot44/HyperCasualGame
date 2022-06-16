@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: 0 1
   m_EditorClassIdentifier: 
   numberEnemy: 1
-  possibilityOfStrings: []
-  difficulty: 2
+  possibilityOfStrings:
+  - 1+0
+  - 2-1
+  - 3-2
+  - 0+1
+  difficulty: 1

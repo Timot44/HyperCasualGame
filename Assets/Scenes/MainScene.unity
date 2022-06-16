@@ -131,6 +131,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8241962265132920874, guid: e93a6d8a13da7b44e8d28f3c47523e67, type: 3}
+      propertyPath: maxTimeBetweenWaves
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241962265132920874, guid: e93a6d8a13da7b44e8d28f3c47523e67, type: 3}
       propertyPath: enemySpawnPoints.Array.data[0]
       value: 
       objectReference: {fileID: 967669094}
@@ -150,6 +154,14 @@ PrefabInstance:
       propertyPath: enemySpawnPoints.Array.data[4]
       value: 
       objectReference: {fileID: 967669090}
+    - target: {fileID: 8241962265132920874, guid: e93a6d8a13da7b44e8d28f3c47523e67, type: 3}
+      propertyPath: waves.Array.data[0].enemySpawnRate
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241962265132920874, guid: e93a6d8a13da7b44e8d28f3c47523e67, type: 3}
+      propertyPath: waves.Array.data[0].numberOfEnemyWave
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8241962265132920875, guid: e93a6d8a13da7b44e8d28f3c47523e67, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1243,6 +1255,10 @@ PrefabInstance:
     - target: {fileID: 4930973581398969409, guid: 674754c4c821cc3408b77eca58f9797c, type: 3}
       propertyPath: m_Name
       value: ScoreManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4930973581398969423, guid: 674754c4c821cc3408b77eca58f9797c, type: 3}
+      propertyPath: scoreObjects.Array.size
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 674754c4c821cc3408b77eca58f9797c, type: 3}

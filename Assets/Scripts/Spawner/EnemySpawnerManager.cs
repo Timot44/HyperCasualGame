@@ -19,7 +19,7 @@ public class EnemySpawnerManager : MonoBehaviour
         Spawning,
         Waiting
     };
-    
+
     public WaveState waveState;
     [SerializeField] private Transform[] enemySpawnPoints;
     public bool isAllEnemiesSpawned;
@@ -32,13 +32,14 @@ public class EnemySpawnerManager : MonoBehaviour
     
     private static EnemySpawnerManager _enemySpawnerManager;
     public static EnemySpawnerManager Instance => _enemySpawnerManager;
-    public List<EnemyDifficulty> enemyDifficulties = new List<EnemyDifficulty>();
+    
+    [Header("NUMBER DIFFICULTIES")] [Space(20)]
+    public NumberDifficulty[] numberDifficulties;
+    
     [Serializable]
-    public struct EnemyDifficulty
+    public struct NumberDifficulty
     {
-        public string name;
         public List<ScriptableObjectScore> scriptableObjectScores;
-        public int enemyDifficultyNumber;
     }
     private void Awake()
     {
@@ -115,9 +116,7 @@ public class EnemySpawnerManager : MonoBehaviour
             {
                 StartNewWave();
             }
-            
         }
-        
     }
 
     private void StartNewWave()
@@ -136,8 +135,45 @@ public class EnemySpawnerManager : MonoBehaviour
         waves.Add(newWave);
         
         waveState = WaveState.Spawning;
+
+        if (newWave.numberOfEnemyWave >= maxEnemiesInWave)
+        {
+            ChangeRandomNumber();   
+        }
     }
 
+    void ChangeRandomNumber()
+    {
+        var scoreObjects = ScoreManager.Instance.scoreObjects;
+        var randomNumber = Random.Range(0, scoreObjects.Count);
+        
+        RemoveAndChangeNumber(randomNumber, scoreObjects[randomNumber]);
+    }
+
+    void RemoveAndChangeNumber(int number, ScriptableObjectScore scriptableObjectScore)
+    {
+        var scoreObjects = ScoreManager.Instance.scoreObjects;
+        switch (scriptableObjectScore.difficulty)
+        {
+            case ScriptableObjectScore.Difficulty.Easy : 
+                scoreObjects.RemoveAt(number);
+                scoreObjects.Insert(number, numberDifficulties[0].scriptableObjectScores[number]);
+                break;
+            case ScriptableObjectScore.Difficulty.Medium : 
+                scoreObjects.RemoveAt(number);
+                scoreObjects.Insert(number, numberDifficulties[1].scriptableObjectScores[number]);
+                break;
+            case ScriptableObjectScore.Difficulty.Hard : 
+                scoreObjects.RemoveAt(number);
+                scoreObjects.Insert(number, numberDifficulties[2].scriptableObjectScores[number]);
+                break;
+            case ScriptableObjectScore.Difficulty.Extreme :
+                ChangeRandomNumber();
+                break;
+        }
+    }
+    
+    
     [Serializable]
     public class Wave
     {

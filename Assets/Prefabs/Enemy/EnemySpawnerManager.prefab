@@ -65,16 +65,31 @@ MonoBehaviour:
   minEnemySpawnRateTimer: 0.4
   numberOfEnemiesToAddNextWave: 1
   reducingWaveTimeRate: 0.05
-  enemyDifficulties:
-  - name: Difficulty 1
-    scriptableObjectScores: []
-    enemyDifficultyNumber: 0
-  - name: Difficulty 2
-    scriptableObjectScores: []
-    enemyDifficultyNumber: 0
-  - name: Difficulty 3
-    scriptableObjectScores: []
-    enemyDifficultyNumber: 0
-  - name: Difficulty 4
-    scriptableObjectScores: []
-    enemyDifficultyNumber: 0
+  numberDifficulties:
+  - scriptableObjectScores:
+    - {fileID: 11400000, guid: 7f013622bdfc35644bf4f632ca054eb9, type: 2}
+    - {fileID: 11400000, guid: 181e34ba06fbacd4490c1fb190944618, type: 2}
+    - {fileID: 11400000, guid: 5c28e4e4fd7cc5946a8ba5341260ed91, type: 2}
+    - {fileID: 11400000, guid: ceb441cf8fd76c6479e7890b4b8c5477, type: 2}
+    - {fileID: 11400000, guid: f4472ffa4355686499fec8ac9b34f6c9, type: 2}
+    - {fileID: 11400000, guid: ed121185a0c40c348ba1ae8f0ffe4906, type: 2}
+    - {fileID: 11400000, guid: cf80a8bc7cf96dc48af49305ccc0c259, type: 2}
+    - {fileID: 11400000, guid: 7ed8025a418307b4f95d6485af1d6ca1, type: 2}
+  - scriptableObjectScores:
+    - {fileID: 11400000, guid: 5a5e84345c0929648ae1b1d602fc5db1, type: 2}
+    - {fileID: 11400000, guid: ce97c826c36a280459b0bcb1f872e01d, type: 2}
+    - {fileID: 11400000, guid: 5fe2fd977d5161344b6303a9e22a756b, type: 2}
+    - {fileID: 11400000, guid: d72d616d0d929f246be965bbf44320f4, type: 2}
+    - {fileID: 11400000, guid: 54830902b06880e4ebbf02ed9a1e6c87, type: 2}
+    - {fileID: 11400000, guid: 7f2fa946b90dbda489daa443c7064720, type: 2}
+    - {fileID: 11400000, guid: c6acb48dc60667845ae747c0d2e028d6, type: 2}
+    - {fileID: 11400000, guid: 96ef94ff85f247a4492403f70f605467, type: 2}
+  - scriptableObjectScores:
+    - {fileID: 11400000, guid: 5efa107a761d1b64ab76ced89285a42c, type: 2}
+    - {fileID: 11400000, guid: 236f052e744ec1640b247e922601e4d8, type: 2}
+    - {fileID: 11400000, guid: da789134861bad249baa876d5628f91a, type: 2}
+    - {fileID: 11400000, guid: b48ba63a67ad3e048ae0b16822d215e4, type: 2}
+    - {fileID: 11400000, guid: ca516da452257a945a42872fd4a17dc5, type: 2}
+    - {fileID: 11400000, guid: a63e815206e11c34ebe07f76b49d1e47, type: 2}
+    - {fileID: 11400000, guid: ae0b91883fb72c94eb2057da590f4638, type: 2}
+    - {fileID: 11400000, guid: 43374269a35ab0a4db1466ade035ab6a, type: 2}
