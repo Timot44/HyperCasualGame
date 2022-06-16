@@ -8,4 +8,5 @@ public class ScriptableObjectScore : ScriptableObject
     public int numberEnemy;
 
     public List<string> possibilityOfStrings;
+    public int difficulty;
 }

@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1370263-6739-4d9d-895c-d84692191d7a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/4.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperCasualGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperCasualGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableObjectScore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableObjectScore.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawner/EnemySpawnerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawner/EnemySpawnerManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +113,7 @@
       <workItem from="1655115266559" duration="49000" />
       <workItem from="1655118241738" duration="1747000" />
       <workItem from="1655205570237" duration="324000" />
+      <workItem from="1655376905737" duration="454000" />
     </task>
     <servers />
   </component>

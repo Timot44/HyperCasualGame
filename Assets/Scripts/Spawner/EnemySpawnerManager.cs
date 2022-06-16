@@ -32,6 +32,14 @@ public class EnemySpawnerManager : MonoBehaviour
     
     private static EnemySpawnerManager _enemySpawnerManager;
     public static EnemySpawnerManager Instance => _enemySpawnerManager;
+    public List<EnemyDifficulty> enemyDifficulties = new List<EnemyDifficulty>();
+    [Serializable]
+    public struct EnemyDifficulty
+    {
+        public string name;
+        public List<ScriptableObjectScore> scriptableObjectScores;
+        public int enemyDifficultyNumber;
+    }
     private void Awake()
     {
         _enemySpawnerManager = this;
