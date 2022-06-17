@@ -29,7 +29,8 @@ public class EnemySpawnerManager : MonoBehaviour
     [SerializeField] private float minEnemySpawnRateTimer = 0.5f;
     [SerializeField] private int numberOfEnemiesToAddNextWave = 2;
     [SerializeField] private float reducingWaveTimeRate = 0.1f;
-    
+    private bool _waitOneWaveBeforeChangeNumber;
+
     private static EnemySpawnerManager _enemySpawnerManager;
     public static EnemySpawnerManager Instance => _enemySpawnerManager;
     
@@ -136,7 +137,16 @@ public class EnemySpawnerManager : MonoBehaviour
         
         waveState = WaveState.Spawning;
 
-        if (newWave.numberOfEnemyWave >= maxEnemiesInWave)
+        if (!_waitOneWaveBeforeChangeNumber)
+        {
+            _waitOneWaveBeforeChangeNumber = true;
+        }
+        else if (_waitOneWaveBeforeChangeNumber)
+        {
+            _waitOneWaveBeforeChangeNumber = false;
+        }
+
+        if (newWave.numberOfEnemyWave >= maxEnemiesInWave && !_waitOneWaveBeforeChangeNumber)
         {
             ChangeRandomNumber();   
         }

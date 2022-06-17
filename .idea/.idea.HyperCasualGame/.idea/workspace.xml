@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1370263-6739-4d9d-895c-d84692191d7a" name="Changes" comment="" />
+    <list default="true" id="a1370263-6739-4d9d-895c-d84692191d7a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperCasualGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperCasualGame/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawner/EnemySpawnerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawner/EnemySpawnerManager.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,8 +50,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/PoolManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableObjectScore.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Spawner/EnemySpawnerManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spawner/EnemySpawnerManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ACsEQp5BMtwTlXP979xccwSKtx" />
@@ -114,6 +117,7 @@
       <workItem from="1655290667026" duration="2721000" />
       <workItem from="1655374905852" duration="4520000" />
       <workItem from="1655383569068" duration="738000" />
+      <workItem from="1655462592799" duration="531000" />
     </task>
     <servers />
   </component>
