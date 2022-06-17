@@ -223,10 +223,11 @@ MonoBehaviour:
     m_Bits: 64
   scoreManager: {fileID: 0}
   score: 0
-  multiplierToAdd: 1
+  multiplierToAdd: 0
   speedToAddIfWrongEnemy: 0.5
   textScore: {fileID: 7668865680943081107}
   textWave: {fileID: 6784169465761164329}
+  floatingText: {fileID: 0}
   panelGameOver: {fileID: 0}
   postProcess: {fileID: 4999001049085514677}
   isGameOver: 0

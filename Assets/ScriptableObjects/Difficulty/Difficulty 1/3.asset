@@ -15,4 +15,4 @@ MonoBehaviour:
   numberEnemy: 3
   possibilityOfStrings:
   - 3
-  difficulty: 1
+  difficulty: 0

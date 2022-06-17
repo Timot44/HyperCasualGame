@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a1370263-6739-4d9d-895c-d84692191d7a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HyperCasualGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HyperCasualGame/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableObjectScore.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableObjectScore.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawner/EnemySpawnerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawner/EnemySpawnerManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,30 +25,33 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Score/ScoreEnemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Score/FloatingText.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PoolManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyHealth.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableObjectScore.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Damageable/IDamageable.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Score/ScoreEnemy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableObjectScore.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Damageable/IDamageable.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableObjectScore.cs" />
       <option value="$PROJECT_DIR$/../SquibblesMania/SquibblesMania/Assets/Scripts/PowerManager/PowerManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Score/ScoreEnemy.cs" />
       <option value="$PROJECT_DIR$/Assets/AssetStore/LeanTween/Framework/LeanTweenExt.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Audio/Sound.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Audio/AudioManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Spawner/EnemySpawnerManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Score/ScoreManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/EnemyHealth.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameEnding.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerHealth.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Score/ScoreEnemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Score/ScoreManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Score/FloatingText.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PoolManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/ScriptableObjectScore.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Spawner/EnemySpawnerManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2ACsEQp5BMtwTlXP979xccwSKtx" />
@@ -110,10 +112,12 @@
       <workItem from="1654965719851" duration="1695000" />
       <workItem from="1655043467522" duration="2038000" />
       <workItem from="1655061270041" duration="3075000" />
-      <workItem from="1655115266559" duration="49000" />
-      <workItem from="1655118241738" duration="1747000" />
-      <workItem from="1655205570237" duration="324000" />
-      <workItem from="1655376905737" duration="454000" />
+      <workItem from="1655115266559" duration="5831000" />
+      <workItem from="1655204638802" duration="3391000" />
+      <workItem from="1655290667026" duration="2721000" />
+      <workItem from="1655374905852" duration="4520000" />
+      <workItem from="1655383569068" duration="738000" />
+      <workItem from="1655462592799" duration="531000" />
     </task>
     <servers />
   </component>

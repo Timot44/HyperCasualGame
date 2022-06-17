@@ -56,4 +56,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8ab40dbb1c4ea834099fac1232624e8e, type: 2}
   enemies: []
   enemiesInGoodOrder: []
-  maxEnemyNumber: 10
+  maxEnemyNumber: 8

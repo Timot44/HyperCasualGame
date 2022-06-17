@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c32672b83c1e3844399c82fb965d5690, type: 3}
   m_Name: 0 5
   m_EditorClassIdentifier: 
-  numberEnemy: 0
-  possibilityOfStrings: []
-  difficulty: 0
+  numberEnemy: 5
+  possibilityOfStrings:
+  - 3+2
+  - 1+5
+  - 6-1
+  difficulty: 1
