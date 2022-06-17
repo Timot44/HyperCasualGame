@@ -9,29 +9,39 @@ public class EnemySpawnerManager : MonoBehaviour
 
     public List<Wave> waves = new List<Wave>();
     [SerializeField]
-    private int waveCount = 0;
+    public int waveCount;
     [SerializeField] private float maxTimeBetweenWaves = 2f;
     [SerializeField] private float waveCountdown;
     public List<Enemy> currentEnemiesInWave = new List<Enemy>();
-    private enum WaveState
+
+    public enum WaveState
     {
         Spawning,
         Waiting
     };
-    [SerializeField]
-    private WaveState waveState;
-    
+
+    public WaveState waveState;
     [SerializeField] private Transform[] enemySpawnPoints;
     public bool isAllEnemiesSpawned;
-
+    private List<Transform> _possibleEnemySpawnPoints = new List<Transform>();
     [Header("NEXT WAVE PARAMETERS")] [SerializeField]
     private int maxEnemiesInWave = 6;
     [SerializeField] private float minEnemySpawnRateTimer = 0.5f;
     [SerializeField] private int numberOfEnemiesToAddNextWave = 2;
     [SerializeField] private float reducingWaveTimeRate = 0.1f;
-    
+    private bool _waitOneWaveBeforeChangeNumber;
+
     private static EnemySpawnerManager _enemySpawnerManager;
     public static EnemySpawnerManager Instance => _enemySpawnerManager;
+    
+    [Header("NUMBER DIFFICULTIES")] [Space(20)]
+    public NumberDifficulty[] numberDifficulties;
+    
+    [Serializable]
+    public struct NumberDifficulty
+    {
+        public List<ScriptableObjectScore> scriptableObjectScores;
+    }
     private void Awake()
     {
         _enemySpawnerManager = this;
@@ -66,7 +76,8 @@ public class EnemySpawnerManager : MonoBehaviour
    private IEnumerator SpawnWave(Wave wave)
     {
         var waitForSecondsEnemySpawnRate = new WaitForSeconds(wave.enemySpawnRate);
-     
+        if (GameManager.Instance != null) GameManager.Instance.textWave.text = $"Wave {waveCount + 1}";
+        _possibleEnemySpawnPoints.AddRange(enemySpawnPoints);
         for (var i = 0; i < wave.numberOfEnemyWave; i++)
         {
             SpawnEnemy(wave);
@@ -78,10 +89,21 @@ public class EnemySpawnerManager : MonoBehaviour
     private void SpawnEnemy(Wave wave)
     {
         //Pick a random spawn point 
-        var randomSpawnTransform = enemySpawnPoints[Random.Range(0, enemySpawnPoints.Length)];
+        var randomSpawnTransform = _possibleEnemySpawnPoints[Random.Range(0, _possibleEnemySpawnPoints.Count)];
         var enemy = Instantiate(wave.enemies[Random.Range(0, wave.enemies.Length)], randomSpawnTransform.position, Quaternion.identity);
         currentEnemiesInWave.Add(enemy);
-        if (currentEnemiesInWave.Count == wave.numberOfEnemyWave) isAllEnemiesSpawned = true;
+        _possibleEnemySpawnPoints.Remove(randomSpawnTransform);
+        if (_possibleEnemySpawnPoints.Count <= 0)
+        {
+            _possibleEnemySpawnPoints.AddRange(enemySpawnPoints);
+        }
+        
+        if (currentEnemiesInWave.Count == wave.numberOfEnemyWave)
+        {
+            ScoreManager.Instance.MechanicLaunched();
+            isAllEnemiesSpawned = true;
+            _possibleEnemySpawnPoints.Clear();
+        }
 
     }
 
@@ -91,9 +113,11 @@ public class EnemySpawnerManager : MonoBehaviour
         if (currentEnemiesInWave.Count <= 0)
         {
             isAllEnemiesSpawned = false;
-            StartNewWave();
+            if (!GameManager.Instance.isGameOver)
+            {
+                StartNewWave();
+            }
         }
-        
     }
 
     private void StartNewWave()
@@ -106,13 +130,60 @@ public class EnemySpawnerManager : MonoBehaviour
         var numberOfEnemyWave = newNumberOfEnemyWave <= maxEnemiesInWave ? newNumberOfEnemyWave : lastWave.numberOfEnemyWave;
         var enemySpawnRate = newEnemySpawnRate >= minEnemySpawnRateTimer ? newEnemySpawnRate : lastWave.enemySpawnRate;
         
-        var newWave = new Wave($"Wave {waveCount + 1}", numberOfEnemyWave, enemySpawnRate, lastWave.enemies);
+        waveCount++;
+        var newWave = new Wave($"Wave {waveCount}", numberOfEnemyWave, enemySpawnRate, lastWave.enemies);
         
         waves.Add(newWave);
-        waveCount++;
+        
         waveState = WaveState.Spawning;
+
+        if (!_waitOneWaveBeforeChangeNumber)
+        {
+            _waitOneWaveBeforeChangeNumber = true;
+        }
+        else if (_waitOneWaveBeforeChangeNumber)
+        {
+            _waitOneWaveBeforeChangeNumber = false;
+        }
+
+        if (newWave.numberOfEnemyWave >= maxEnemiesInWave && !_waitOneWaveBeforeChangeNumber)
+        {
+            ChangeRandomNumber();   
+        }
     }
 
+    void ChangeRandomNumber()
+    {
+        var scoreObjects = ScoreManager.Instance.scoreObjects;
+        var randomNumber = Random.Range(0, scoreObjects.Count);
+        
+        RemoveAndChangeNumber(randomNumber, scoreObjects[randomNumber]);
+    }
+
+    void RemoveAndChangeNumber(int number, ScriptableObjectScore scriptableObjectScore)
+    {
+        var scoreObjects = ScoreManager.Instance.scoreObjects;
+        switch (scriptableObjectScore.difficulty)
+        {
+            case ScriptableObjectScore.Difficulty.Easy : 
+                scoreObjects.RemoveAt(number);
+                scoreObjects.Insert(number, numberDifficulties[0].scriptableObjectScores[number]);
+                break;
+            case ScriptableObjectScore.Difficulty.Medium : 
+                scoreObjects.RemoveAt(number);
+                scoreObjects.Insert(number, numberDifficulties[1].scriptableObjectScores[number]);
+                break;
+            case ScriptableObjectScore.Difficulty.Hard : 
+                scoreObjects.RemoveAt(number);
+                scoreObjects.Insert(number, numberDifficulties[2].scriptableObjectScores[number]);
+                break;
+            case ScriptableObjectScore.Difficulty.Extreme :
+                ChangeRandomNumber();
+                break;
+        }
+    }
+    
+    
     [Serializable]
     public class Wave
     {

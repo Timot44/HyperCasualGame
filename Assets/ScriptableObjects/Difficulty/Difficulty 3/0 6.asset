@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c32672b83c1e3844399c82fb965d5690, type: 3}
-  m_Name: 5
+  m_Name: 0 6
   m_EditorClassIdentifier: 
-  numberEnemy: 5
+  numberEnemy: 6
   possibilityOfStrings:
-  - 3+2
-  - 4+5-4
-  - 4+1
-  - 2x2-1
-  - 10/2
+  - 2x3
+  - 12/2
+  - 6x1
+  difficulty: 2
